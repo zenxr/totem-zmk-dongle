@@ -59,46 +59,57 @@
         Base {
             label = "Base";
             bindings = <
-              &kp SINGLE_QUOTE  &kp COMMA   &kp PERIOD     &kp P         &kp Y        &kp F    &kp G        &kp C        &kp R       &kp L
-              &hm LGUI A        &hm LALT O  &hm LCTRL E    &hm LSHIFT U  &kp I        &kp D    &hm RSHFT H  &hm RCTRL T  &hm RALT N  &hm RGUI S
-&lt 3 ESCAPE  &kp SEMI          &kp Q       &kp J          &kp K         &kp X        &kp B    &kp M        &kp W        &kp V       &kp Z       &kp SLASH
-                                            &mt LCTRL DEL  &lt 1 TAB     &kp SPACE    &kp RET  &lt 2 BSPC   &kp MINUS
+              &kp SINGLE_QUOTE  &kp COMMA   &kp PERIOD     &kp P         &kp Y        &kp F      &kp G        &kp C        &kp R       &kp L
+              &hm LGUI A        &hm LALT O  &hm LCTRL E    &hm LSHIFT U  &kp I        &kp D      &hm RSHFT H  &hm RCTRL T  &hm RALT N  &hm RGUI S
+&lt 3 ESCAPE  &kp SEMI          &kp Q       &kp J          &kp K         &kp X        &kp B      &kp M        &kp W        &kp V       &kp Z       &kp SLASH
+                                            &mt LCTRL DEL  &lt 1 TAB     &kp SPACE    &lt 2 RET  &lt 3 BSPC   &lt 4 MINUS
             >;
         };
 
         Nav {
             label = "Nav";
             bindings = <
-              &kp TILDE       &trans     &kp UP_ARROW  &trans     &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-              &kp LEFT_SHIFT  &kp LEFT   &kp DOWN      &kp RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&kp LEFT_ALT  &kp LEFT_WIN    &kp MINUS  &trans        &kp PLUS   &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp PLUS
-                                         &trans        &trans     &trans      &trans    &trans        &kp DOT
+        &trans  &trans  &trans  &trans  &trans    &kp K_REDO  &kp K_PASTE    &kp K_COPY   &kp K_CUT  &kp K_UNDO
+        &trans  &trans  &trans  &trans  &trans    &kp LEFT    &kp DOWN       &kp UP       &kp RIGHT  &kp CAPSLOCK
+&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp INSERT    &kp PLUS
+                        &trans  &trans  &trans    &trans      &trans         &trans
             >;
         };
 
         Sym {
             label = "Sym";
             bindings = <
-        &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
-        &trans    &trans  &trans    &trans      &trans         &trans     &trans         &trans           &trans   &trans
-&trans  &trans    &trans  &trans    &trans      &trans         &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
-                          &trans    &trans      &trans         &trans     &trans         &trans
+        &kp EXCL   &kp AT  &kp HASH        &kp DOLLAR            &kp PERCENT         &kp CARET          &kp AMPERSAND          &kp KP_ASTERISK  &kp EQUAL  &kp TILDE
+        &kp GRAVE  &trans  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp UNDER  &trans
+&trans  &trans     &trans  &trans          &trans                &kp SLASH           &kp BACKSLASH      &trans                 &trans           &trans     &trans     &trans
+                           &trans          &trans                &trans              &trans             &trans                 &trans
             >;
         };
 
-        Fun {
-            label = "Fun";
+        Num {
+            label = "Num";
             bindings = <
-        &bootloader  &trans  &trans  &trans  &to 4     &trans  &trans  &trans  &kp END  &kp F1
-        &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &kp F10
-&trans  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &kp F20  &kp F7
-                             &trans  &trans  &trans    &trans  &trans  &trans
+        &kp LEFT_BRACKET  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp RIGHT_BRACKET    &trans  &trans  &trans  &trans  &trans
+        &kp SEMICOLON     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_EQUAL         &trans  &trans  &trans  &trans  &trans
+&trans  &kp GRAVE         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp BACKSLASH        &trans  &trans  &trans  &trans  &trans  &trans
+                                           &kp KP_DOT       &kp KP_MINUS     &kp KP_NUMBER_0      &trans  &trans  &trans
             >;
+        };
+
+        Func {
+            bindings = <
+        &trans  &kp F7  &kp F8  &kp F9  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &kp F4  &kp F5  &kp F6  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp F1  &kp F2  &kp F3  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "Func";
         };
 
         Gaming {
             bindings = <
-            &kp Z           &kp X  &kp C      &kp V         &sl 5     &trans  &trans  &trans  &trans  &trans
+            &kp Z           &kp X  &kp C      &kp V         &sl 6     &trans  &trans  &trans  &trans  &trans
             &kp TAB         &kp Q  &kp W      &kp E         &kp R     &trans  &trans  &trans  &trans  &trans
 &kp ESCAPE  &kp LEFT_SHIFT  &kp A  &kp S      &kp D         &kp F     &trans  &trans  &trans  &trans  &trans  &trans
                                    &kp LCTRL  &kp LEFT_ALT  &trans    &trans  &trans  &trans
