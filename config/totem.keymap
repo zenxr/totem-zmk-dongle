@@ -62,7 +62,7 @@
               &kp SINGLE_QUOTE  &kp COMMA   &kp PERIOD     &kp P         &kp Y        &kp F      &kp G        &kp C        &kp R       &kp L
               &hm LGUI A        &hm LALT O  &hm LCTRL E    &hm LSHIFT U  &kp I        &kp D      &hm RSHFT H  &hm RCTRL T  &hm RALT N  &hm RGUI S
 &lt 3 ESCAPE  &kp SEMI          &kp Q       &kp J          &kp K         &kp X        &kp B      &kp M        &kp W        &kp V       &kp Z       &kp SLASH
-                                            &mt LCTRL DEL  &lt 1 TAB     &kp SPACE    &lt 2 RET  &lt 3 BSPC   &lt 4 MINUS
+                                            &mt LCTRL DEL  &lt 3 TAB     &kp SPACE    &lt 2 RET  &lt 1 BSPC   &lt 4 MINUS
             >;
         };
 
@@ -80,8 +80,8 @@
             label = "Sym";
             bindings = <
         &kp EXCL   &kp AT  &kp HASH        &kp DOLLAR            &kp PERCENT         &kp CARET          &kp AMPERSAND          &kp KP_ASTERISK  &kp EQUAL  &kp TILDE
-        &kp GRAVE  &trans  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp UNDER  &trans
-&trans  &trans     &trans  &trans          &trans                &kp SLASH           &kp BACKSLASH      &trans                 &trans           &trans     &trans     &trans
+        &kp GRAVE  &trans  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp UNDER  &kp PIPE
+&trans  &trans     &trans  &trans          &kp LESS_THAN         &kp SLASH           &kp BACKSLASH      &kp GREATER_THAN       &trans           &trans     &trans     &trans
                            &trans          &trans                &trans              &trans             &trans                 &trans
             >;
         };
@@ -89,10 +89,10 @@
         Num {
             label = "Num";
             bindings = <
-        &kp LEFT_BRACKET  &kp N7        &kp N8        &kp N9        &kp RIGHT_BRACKET    &trans  &trans  &trans  &trans  &trans
-        &kp SEMICOLON     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL            &trans  &trans  &trans  &trans  &trans
-&trans  &kp GRAVE         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH        &trans  &trans  &trans  &trans  &trans  &trans
-                                        &kp DOT       &kp MINUS     &kp N0               &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &kp EQUAL    &kp N7        &kp N8        &kp N9        &kp EQUAL
+        &trans  &trans  &trans  &trans  &trans    &kp KP_PLUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MULTIPLY
+&trans  &trans  &trans  &trans  &trans  &trans    &kp MINUS    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DIVIDE    &trans
+                        &trans  &trans  &trans    &trans       &kp PERIOD    &kp N0
             >;
         };
 
