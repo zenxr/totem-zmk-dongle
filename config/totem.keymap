@@ -11,6 +11,7 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define Base        0
@@ -51,7 +52,21 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        Capsword {
+            bindings = <&caps_word>;
+            key-positions = <13 16>;
+            layers = <0>;
+        };
+
+        bt {
+            bindings = <&tog 5>;
+            key-positions = <20 31>;
+            layers = <0 5>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -107,26 +122,13 @@
             label = "Func";
         };
 
-        Gaming {
+        bluetooth {
             bindings = <
-            &kp Z           &kp X  &kp C      &kp V         &sl 6     &trans  &trans  &trans  &trans  &trans
-            &kp TAB         &kp Q  &kp W      &kp E         &kp R     &trans  &trans  &trans  &trans  &trans
-&kp ESCAPE  &kp LEFT_SHIFT  &kp A  &kp S      &kp D         &kp F     &trans  &trans  &trans  &trans  &trans  &trans
-                                   &kp LCTRL  &kp LEFT_ALT  &trans    &trans  &trans  &trans
+        &bt BT_CLR  &trans  &trans  &trans  &bt BT_SEL 0    &trans  &trans  &trans  &trans  &trans
+        &trans      &trans  &trans  &trans  &bt BT_SEL 1    &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &trans  &trans  &trans  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans  &trans          &trans  &trans  &trans
             >;
-
-            label = "Gaming";
-        };
-
-        Gaming+ {
-            bindings = <
-        &kp F10  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp T     &kp RA(RC(Y))  &kp RA(RC(U))  &trans  &trans  &kp LC(RA(DEL))
-        &kp L    &kp O         &kp Y         &kp K         &kp G     &kp F5         &trans         &trans  &trans  &trans
-&trans  &to 0    &trans        &trans        &trans        &trans    &trans         &trans         &trans  &trans  &trans           &kp LA(F4)
-                               &kp J         &kp I         &kp M     &trans         &trans         &trans
-            >;
-
-            label = "Gaming+";
         };
     };
 };
